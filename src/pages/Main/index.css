@@ -1,0 +1,10 @@
+.list{
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    
+}
+
+.header{
+    text-align: center;
+}

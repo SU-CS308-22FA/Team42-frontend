@@ -1,0 +1,33 @@
+.teamcard{
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0px 0px 2px 2px;
+    background-color:  azure;
+    margin: auto;
+    margin-bottom: 15px;
+    justify-content: center;
+
+}
+
+
+
+.teamcontent img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.teamcontent button{
+    padding: 5px 15px;
+    display: block;
+    margin: 5px auto 0;
+    font-size: 13px;
+}
+
+.teamname{
+    text-align: center;
+}
+
