@@ -6,7 +6,7 @@ const Table = ({ data }) => {
   // };
   // const seeEventDetails = () => {
   //   window.location = "/matchdetails/" + id;
-	// };
+	// }; 
   const seeDetails = (item)=> {
     // detect what is that item
     if(item.team_id)
