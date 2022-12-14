@@ -26,29 +26,29 @@ Play.tff is an web app developed for turkish football federation. The main purpo
 ### 2.1 Installing the Software <a name="installandrunsoftware"/>
 Link: https://cs308-frontend42.herokuapp.com/
 
-Clone the repository.
-Open the working directory. 
-Install dependencies with "npm install" command.
-Open http://localhost:3000/ in browser.
+Clone the repository. <br />
+Open the working directory.  <br />
+Install dependencies with "npm install" command. <br />
+Open http://localhost:3000/ in browser. <br />
 
 # 3. Developer Documentation <a name="devdoc"/>
 
 ### 3.1 Obtaining source code <a name="obtainsource"/>
 
-Open the terminal.
-Select the directory.
-Type "git clone https://github.com/SU-CS308-22FA/Team42-frontend.git"
-Select Client directory.
-After cloning the repository you should install the dependencies with "npm install" command.
-You can start the app with "npm start" command.
+Open the terminal. <br />
+Select the directory. <br />
+Type "git clone https://github.com/SU-CS308-22FA/Team42-frontend.git" <br />
+Select Client directory. <br />
+After cloning the repository you should install the dependencies with "npm install" command. <br />
+You can start the app with "npm start" command. <br />
 
 ## 3.2 Building Webapp <a name="layoutdirectory"/>
 
-**node_modules**: Contains node packages for running project.
-**Components**: Contains all of the components.
-**Pages**: Contains page views for each page seperately.
-**Config**: Contains routes and their details.
-**app.js**: Contains Main Router.
+**node_modules**: Contains node packages for running project. <br />
+**Components**: Contains all of the components. <br />
+**Pages**: Contains page views for each page seperately. <br />
+**Config**: Contains routes and their details. <br />
+**app.js**: Contains Main Router. <br />
 **package.json**: Contains the packages we used in our app.
 
 
