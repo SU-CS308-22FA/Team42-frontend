@@ -31,7 +31,7 @@ export default function CreateEventModal() {
 		try {
 			const url = "https://cs308-db.herokuapp.com/api/competition/register";
 			const { data: res } = await axios.post(url, data);
-			navigate("/");
+			window.location = '/';
 			console.log(res.message);
 		} catch (error) {
 			if (

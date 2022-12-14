@@ -10,6 +10,8 @@ import Signup from "../pages/Signup/index.jsx"
 import DetailCompetitionPage from "../pages/DetailCompetitionPage/index.jsx";
 import TeamListPage from "../pages/TeamList/index.jsx";
 import ChangeInfo from "../pages/ChangeInfo/index.jsx";
+import DetailTeamPage from "../pages/DetailTeamPage/index.jsx";
+import SearchBar from "../components/Searchbar/index.jsx";
 
 export default function MainRouter()
 {
@@ -20,8 +22,11 @@ export default function MainRouter()
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<Signup/>} />
             <Route path= {"/matchdetails/" + "*"}  element={<DetailCompetitionPage/>} />
+            <Route path= {"/teamdetails/" + "*"}  element={<DetailTeamPage/>} />
             <Route path= {"/teamlist"}  element={<TeamListPage/>} />
             <Route path= {"/changeinfo"} element={<ChangeInfo/>} />
+            <Route path= {"/searchevent"} element={<SearchBar/>} />
+
         </Routes>
     );
 }

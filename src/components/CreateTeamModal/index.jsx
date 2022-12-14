@@ -4,8 +4,11 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export default function CreateTeamModal() {
+  var id = localStorage.getItem("id")
     const [data, setData] = useState({
+    team_id: 1,
 		team_name: "",
+    lineup: { player_nickname: "NICKNAME", jersey_number: "1"} 
 	});
 	const [error, setError] = useState("");
 	const navigate = useNavigate();
@@ -22,7 +25,7 @@ export default function CreateTeamModal() {
           return;
         }
 		try {
-			const url = "https://cs308-db.herokuapp.com/api/teams/register";
+			const url = " https://cs308-db.herokuapp.com/api/teams/register/" + id;
 			const { data: res } = await axios.post(url, data);
 			navigate("/profile");
 			console.log(res.message);

@@ -1,7 +1,26 @@
 import React from 'react'
 import './index.css'
 import axios from 'axios';
+import { useState, useEffect } from 'react';
 const CompetitionCard = ({competition}) => {
+  const [user, setUser] = useState();
+	useEffect(() => {
+		const getUser = async () => {
+			try{
+				var id = localStorage.getItem("id");
+				console.log(id);
+				var myUser = await axios.get("https://cs308-db.herokuapp.com/api/profiles/" + id);
+				setUser(myUser.data)
+
+			}catch(e)
+			{
+
+			}
+			
+		}
+	
+		getUser();
+	}, [])
   const seeDetails = () => {
     window.location = "/matchdetails/" + competition._id;
 	};
@@ -35,7 +54,8 @@ const CompetitionCard = ({competition}) => {
         <div className='btn'>
             <button  onClick={seeDetails} type='submit'>See Details</button>
             <button onClick={registerCompetition} type='submit'>Register Competition</button>
-            <button onClick={deleteCompetition} type='submit'>Delete Competition</button>
+            {(user && user.is_admin) && <button onClick={deleteCompetition} type='submit'>Delete Competition</button>}
+            
         </div>
       </div>        
     </div>

@@ -38,11 +38,13 @@ const Navbar = () => {
 			<nav className={styles.navbar}>
 				<h1 onClick={() => handleRouting('/')}>play.tff</h1>
 				<div className={styles.rhs}>
+				<button className={styles.white_btn_outline}onClick={() => handleRouting('/searchevent')}>Search Page</button>
 				<button className={styles.white_btn_outline}onClick={() => handleRouting('/teamlist')}>Team List</button>
 
 					<button className={styles.white_btn_outline}onClick={() => handleRouting('/profile')}>Profile</button>
 
 					<button className={styles.white_btn} onClick={handleLogout}>Logout</button>
+
 					
 				</div>
                 

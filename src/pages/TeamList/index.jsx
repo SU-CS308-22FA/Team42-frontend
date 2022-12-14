@@ -16,6 +16,7 @@ const TeamListPage = () => {
     useEffect(()=>{
         fetchTeams();
     },[])
+    
 
   return (  
     <div>

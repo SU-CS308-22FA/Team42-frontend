@@ -28,7 +28,9 @@ const UserCard = ({user}) => {
                 
                 
                 <CreateTeamModal></CreateTeamModal>
-					      <CreateEventModal></CreateEventModal>
+                {user.is_admin && <CreateEventModal></CreateEventModal>}
+                
+                
                 <br></br>
                 <button className='deletebutton' onClick={deleteUser}> Delete User </button>
             </div>
