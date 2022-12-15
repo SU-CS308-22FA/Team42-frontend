@@ -7,7 +7,8 @@
   - [2.1 Installing the Software](#installandrunsoftware)
 + #### [3.Develeoper Documentation](#devdoc)
   - [3.1 Building Webapp](#obtainsource)
-  - [3.2 Layout of the directory](#layoutdirectory)
+  - [3.2 Backend Source](#obtainsourcebackend)
+  - [3.3 Layout of the directory](#layoutdirectory)
   
 # **Play.tff**
 # 1.Description <a name="desc"/>
@@ -33,7 +34,7 @@ Open http://localhost:3000/ in browser. <br />
 
 # 3. Developer Documentation <a name="devdoc"/>
 
-### 3.1 Obtaining source code <a name="obtainsource"/>
+### 3.1 Obtaining frontend source code <a name="obtainsource"/>
 
 Open the terminal. <br />
 Select the directory. <br />
@@ -42,7 +43,16 @@ Select Client directory. <br />
 After cloning the repository you should install the dependencies with "npm install" command. <br />
 You can start the app with "npm start" command. <br />
 
-## 3.2 Building Webapp <a name="layoutdirectory"/>
+### 3.2 Obtaining backend source code <a name="obtainsourcebackend"/>
+
+Open the terminal. <br />
+Select the directory. <br />
+Type "git clone https://github.com/SU-CS308-22FA/Team42-backend.git" <br />
+Select Client directory. <br />
+After cloning the repository you should install the dependencies with "npm install" command. <br />
+You can start the app with "npm start" command. <br />
+
+## 3.3 Building Webapp <a name="layoutdirectory"/>
 
 **node_modules**: Contains node packages for running project. <br />
 **Components**: Contains all of the components. <br />
