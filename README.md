@@ -23,7 +23,7 @@ Play.tff is an web app developed for turkish football federation. The main purpo
 
 
 # 2.User Documentation <a name="userdoc"/>
-### 2.1 Installing the Software <a name="installandrunsoftware"/>
+### 2.1 Installing and Running the Software <a name="installandrunsoftware"/>
 Link: https://cs308-frontend42.herokuapp.com/
 
 Clone the repository. <br />
