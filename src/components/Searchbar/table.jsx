@@ -1,5 +1,6 @@
 const Table = ({ data }) => {
   const args = ["teams", "competitions", "users"];
+  var eren =""
   var id = ""
   // const seeTeamDetails = () => {
   //   window.location = "/teamdetails/" + id;
