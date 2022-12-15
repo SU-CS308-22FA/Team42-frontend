@@ -52,6 +52,11 @@ Select Client directory. <br />
 After cloning the repository you should install the dependencies with "npm install" command. <br />
 You can start the app with "npm start" command. <br />
 
+The backend code includes the schemas of various class objects in the folder named "models". <br />
+Implementation of http requests can be found under the folder name "routes". <br />
+.env file includes all the constant variables necessary for the connection to the mongodb. <br />
+app.js is a main file that includes the connection to the database, cors, and access to the routes folder. <br />
+
 ## 3.3 Building Webapp <a name="layoutdirectory"/>
 
 **node_modules**: Contains node packages for running project. <br />
