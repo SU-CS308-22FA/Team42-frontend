@@ -5,6 +5,8 @@
 + #### [1.Description](#desc)
 + #### [2.User Documentation](#userdoc)
   - [2.1 Installing the Software](#installandrunsoftware)
+  - [2.2 Reporting a Bug](#reportbug)
+  - [2.3 Known Bugs](#knownbug)
 + #### [3.Develeoper Documentation](#devdoc)
   - [3.1 Building Webapp](#obtainsource)
   - [3.2 Backend Source](#obtainsourcebackend)
@@ -31,6 +33,16 @@ Clone the repository. <br />
 Open the working directory.  <br />
 Install dependencies with "npm install" command. <br />
 Open http://localhost:3000/ in browser. <br />
+
+### 2.2 How to report a bug <a name="reportbug"/>
+If you notice any bugs in the app please let us know via sending e mail. <br />
+Emails: giriskeneren@sabanciuniv.edu  <br />
+
+### 2.3 Known bugs <a name="knownbug"/>
+
+There is visual bug when user try to create team. <br />
+While deleting a team with multiple members some of the users' statuses dont update. <br />
+
 
 # 3. Developer Documentation <a name="devdoc"/>
 
