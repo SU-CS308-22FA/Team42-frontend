@@ -16,7 +16,12 @@ const Table = ({ data }) => {
     }else if(item.competition_id)
     {
       window.location = "/matchdetails/" + item._id;
-    }else{
+    }
+    else if(item.fullname){
+      window.location = "/userdetails/" + item._id;
+    }
+    
+    else{
       // go to player page
     }
   }

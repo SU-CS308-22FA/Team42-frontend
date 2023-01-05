@@ -1,8 +1,11 @@
 import axios from "axios";
 import React, { useState, useEffect } from 'react';
 import styles from "./styles.module.css";
+import NotificationModal from "../NotificationModal";
+import "./index.css";
 
 const Navbar = () => {
+	const [openModal, setOpenModal] = useState(false);
 	
 	const [user, setUser] = useState();
 	useEffect(() => {
@@ -38,8 +41,18 @@ const Navbar = () => {
 			<nav className={styles.navbar}>
 				<h1 onClick={() => handleRouting('/')}>play.tff</h1>
 				<div className={styles.rhs}>
+				<button 
+					onClick={() => setOpenModal(true)} 
+					className={styles.white_btn_outline}>
+						Notifications
+					</button>
+					<NotificationModal 
+						open={openModal} 
+						onClose={() => setOpenModal(false)} />
+					
 				<button className={styles.white_btn_outline}onClick={() => handleRouting('/searchevent')}>Search Page</button>
 				<button className={styles.white_btn_outline}onClick={() => handleRouting('/teamlist')}>Team List</button>
+				<button className={styles.white_btn_outline}onClick={() => handleRouting('/friendlist')}>Friend List</button>
 
 					<button className={styles.white_btn_outline}onClick={() => handleRouting('/profile')}>Profile</button>
 

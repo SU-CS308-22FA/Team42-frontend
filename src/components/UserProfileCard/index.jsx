@@ -13,6 +13,9 @@ const UserCard = ({user}) => {
 			}
 		)
 	}
+  const addFriend = () =>{
+
+  }
   return (
     <div className="container">
        <div className="card_item" >
@@ -24,15 +27,9 @@ const UserCard = ({user}) => {
                     <div className="gitDetail"><span>{user.phone} </span></div>
                 </div>
                 <p className='bio'>STATISTICS WILL BE DISPLAYED HERE</p>
-
                 
+               
                 
-                <CreateTeamModal></CreateTeamModal>
-                {user.is_admin && <CreateEventModal></CreateEventModal>}
-                
-                
-                <br></br>
-                <button className='deletebutton' onClick={deleteUser}> Delete User </button>
             </div>
             
 

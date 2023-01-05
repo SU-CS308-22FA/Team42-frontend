@@ -3,30 +3,29 @@ import React, { useState, useEffect } from 'react';
 import Navbar from "../../components/Navbar/Navbar";
 import styles from "./styles.module.css";
 import UserProfileCard from "../../components/UserProfileCard"
-import CreateEventModal from "../../components/CreateEventModal";
-import CreateTeamModal from "../../components/CreateTeamModal";
 
-const Profile = () => {
-	
+const UserInfoPage = () => {
 	const [user, setUser] = useState();
-	useEffect(() => {
-		const getUser = async () => {
-			try{
-				var id = localStorage.getItem("id");
-				console.log(id);
-				var myUser = await axios.get("https://cs308-db.herokuapp.com/api/profiles/" + id);
-				setUser(myUser.data);
-				console.log(user);
+    var path = window.location.pathname;
+    var directories = path.split("/");
+    var lastDirecotry = directories[(directories.length - 1)];
+	var id = localStorage.getItem("id");
+	const [data, setData] = useState({ requester: id, recipient: lastDirecotry });
 
-			}catch(e)
-			{
+    const fetchCompetition = async() => {
+        const res = await axios.get( "https://cs308-db.herokuapp.com/api/profiles/" + lastDirecotry ) 
+        setUser(res.data)
+    }
 
-			}
-			
-		}
-	
-		getUser();
-	}, [])
+    useEffect(()=>{
+        fetchCompetition();
+    },[])
+
+	const addFriend = async (e) =>{
+		const res = await axios.post("https://cs308-db.herokuapp.com/api/friend_requests/create", data )
+		console.log(res)
+		console.log(data)
+	}
 	
 	const handleLogout = () => {
 		localStorage.removeItem("token");
@@ -58,20 +57,9 @@ const Profile = () => {
 				user && 
 				<div>
 					<UserProfileCard user={user}></UserProfileCard>
-					<CreateEventModal></CreateEventModal>
-					<CreateTeamModal></CreateTeamModal>
+					<button onClick={addFriend} > Add Friend </button>
 
-					<form onSubmit={updateUser}>
-						<p>Change User informations:</p>
-						<input type="text" placeholder="Email" name="email"  />
-						<input type="text" placeholder="Fullname" name="fullname"  />
-						<input type="text" placeholder="Phone" name="phone" />
-						<input type="password" placeholder="New Password" name="password"  />
-						{/* <input type="text" name="" required /> */}
-						<button >Update User</button>
-						<br></br>
-						
-					</form>
+					
 
 					
 					
@@ -83,4 +71,4 @@ const Profile = () => {
 	);
 };
 
-export default Profile;
+export default UserInfoPage;

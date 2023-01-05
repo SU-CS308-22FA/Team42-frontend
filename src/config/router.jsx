@@ -12,6 +12,8 @@ import TeamListPage from "../pages/TeamList/index.jsx";
 import ChangeInfo from "../pages/ChangeInfo/index.jsx";
 import DetailTeamPage from "../pages/DetailTeamPage/index.jsx";
 import SearchBar from "../components/Searchbar/index.jsx";
+import UserInfoPage from "../pages/UserInfoPage/index.jsx";
+import FriendList from "../components/FriendList/index.jsx";
 
 export default function MainRouter()
 {
@@ -26,6 +28,8 @@ export default function MainRouter()
             <Route path= {"/teamlist"}  element={<TeamListPage/>} />
             <Route path= {"/changeinfo"} element={<ChangeInfo/>} />
             <Route path= {"/searchevent"} element={<SearchBar/>} />
+            <Route path= {"/userdetails" + "*"}  element={<UserInfoPage/>} />
+            <Route path= {"/friendlist"} element={<FriendList></FriendList>} />
 
         </Routes>
     );
