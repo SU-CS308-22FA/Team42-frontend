@@ -17,19 +17,13 @@ class PythonOrgSearch(unittest.TestCase):
         driver = self.driver
         time.sleep(2)
 
-        driver.get("https://cs308-frontend42.herokuapp.com/login")
-        email = driver.find_element(By.NAME, "email")
-        password = driver.find_element(By.NAME, "password")
-        email.send_keys("accepter@gmail.com")
+        driver.get("https://cs308-frontend42.herokuapp.com/searchevent")
+        search = driver.find_element(By.XPATH,"//input[@placeholder='Search...']")
         time.sleep(2)
-        password.send_keys("ereneren")
+        search.send_keys("ere")
         time.sleep(2)
-        password.send_keys(Keys.RETURN)
-        time.sleep(2)
-        driver.find_element(By.LINK_TEXT, "Sign In").click()
-        time.sleep(2)
-        driver.find_element(By.LINK_TEXT, "Search Page").click()
-        time.sleep(5)
+        self.assertIn("Eren", driver.page_source)
+       
         
     def tearDown(self):
         self.driver.close()
